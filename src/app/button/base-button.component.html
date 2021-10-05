@@ -1,0 +1,11 @@
+<ng-container
+  *ngComponentOutlet="
+    buttonComponentType;
+    content: [[buttonContent]];
+    injector: buttonComponentInjector
+  "
+></ng-container>
+
+<div #buttonContent>
+  <ng-content></ng-content>
+</div>
