@@ -1,5 +1,11 @@
 import { CommonModule } from '@angular/common';
-import { Component, Injector, Input, NgModule } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  Injector,
+  Input,
+  NgModule,
+} from '@angular/core';
 import { disabledAttributeToken } from './disabled-attribute-token';
 
 import {
@@ -12,6 +18,7 @@ import {
 } from './secondary/secondary-button.component';
 
 @Component({
+  changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'base-button',
   templateUrl: './base-button.component.html',
 })
